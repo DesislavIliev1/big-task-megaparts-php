@@ -19,27 +19,58 @@ session_start();
 
 <body>
 
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+           
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                        <a class="nav-link" href="index.php">Home</a>
+                    </li>
+                    
+                    
+                    
+
+                </ul>
+                
+            </div>
+        </div>
+    </nav>
    
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Image</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-               
-              
-            </tr>
-            
-        </thead>
-        <tbody>
-            
-        </tbody>
-    </table>
-
+    
     <?php
+
+    $output = "";
+
+    $output .=  "<table class='table'>
+    <thead>
+        <tr>
+            <th scope='col'>id</th>
+            <th scope='col'>Name</th>
+            <th scope='col'>Description</th>
+            <th scope='col'>Price</th>
+            <th scope='col'>Image</th>
+            <th scope='col'>Action</th>
+           
+          
+        </tr>
+        
+    </thead>
+    <tbody>
+        
+    ";
+
+
+
+
+
     if(!empty($_SESSION['cart'])){
 
         foreach ($_SESSION['cart'] as $key => $value ){
@@ -51,8 +82,14 @@ session_start();
                 <td>".$value['id']."</td>
                 <td>".$value['name']."</td>
                 <td>".$value['description']."</td>
-                <td>".$value['price']."</td>
-                <td>".$value['image']."</td>
+                <td>".$value['price']. "лв</td>
+                <td><img src='icons".$value['image']."'></td>
+                <td>
+                <a href='cart.php?action=remove&id=".$value['id']."'>
+                <button class='btn btn-danger'>Remove</button>
+                </a>
+                
+                </td>
             </tr>";
 
             
@@ -63,8 +100,34 @@ session_start();
 
     }
 
+    $output .= "<tr>
+                   <td colspan='3></td>
+                   <td></b>Total Price </b></td>
+                   <td>
+                   <a href='cart.php?action=clearall'>
+                   <button class='btn btn-danger'>Clear Cart</button>
+                   </a></td> ";
+
     
-    
+    echo $output;
+
+    if(isset($_GET['action'])){
+
+        if($_GET['action'] == 'clearall'){
+            unset($_SESSION['cart']);
+        }
+
+        if($_GET['action'] == 'remove'){
+
+            foreach ($_SESSION['cart'] as $key => $value){
+                
+                if($value['id'] == $_GET['id']){
+                    unset($_SESSION['cart'][$key]);
+                }
+
+            }
+        }
+    }
     
     ?>
 

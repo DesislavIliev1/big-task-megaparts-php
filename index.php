@@ -1,11 +1,11 @@
 <?php
-
+session_start();
 include_once 'connection.php';
 include_once 'product_controller.php';
 include_once 'product.php';
 include_once 'products_manager.php';
 
-session_start();
+
 // if(isset($_POST['add_to_cart'])){
 //     $id = $_POST['id'];
 //     $name = $_POST['name'];
@@ -28,7 +28,7 @@ session_start();
 // }
 
 
-
+// unset($_SESSION['cart']);
 
 
    if(isset($_POST['add_to_cart'])){
@@ -55,13 +55,15 @@ session_start();
     }else{
         $session_array = array(
             "id" => $_GET['id'],
-            "name" => $_GET['name'],
-            "description" => $_GET['description'],
-            "price" => $_GET['price'],
-            "image" => $_GET['image']
+            "name" => $_POST['name'],
+            "description" => $_POST['description'],
+            "price" => $_POST['price'],
+            "image" => $_POST['image']
         );
 
         $_SESSION['cart'][]= $session_array;
+
+    
     }
 
 }
@@ -345,6 +347,10 @@ session_start();
             </div>
         </div>
     </nav>
+
+    
+
+    
 
 
     <div class="backgr" id="back">

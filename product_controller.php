@@ -25,7 +25,9 @@
                             ' .$row['price'].' лв.
                         </mark>
                         <input type="hidden" name="name" value="'.$row['name'].'";>
-                        <input type="hidden" name="name" value="'.$row['price'].' ";>
+                        <input type="hidden" name="description" value="'.$row['description'].'";>
+                        <input type="hidden" name="price" value="'.$row['price'].' ";>
+                        <input type="hidden" name="image" value="'.$row['image'].' ";>
                         <input type="submit" name="add_to_cart" value="Добави в количка" class="btn btn-primary">
                         
                        
