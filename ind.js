@@ -182,6 +182,26 @@ document.addEventListener("DOMContentLoaded", function () {
           
               });
 
+
+              gsap.fromTo(".products", {
+                visibility: "hidden",
+                x: 100,
+                ease: "linear",
+                duration: 1
+              },
+                {
+                  visibility: "visible",
+                  x: 0,
+            
+            
+                  scrollTrigger: {
+                    trigger: ".products",
+                    start: "top 40%",
+                    // toggleActions:"play restart restart reverse"
+                  }
+            
+                });
+
   gsap.registerPlugin(ScrollTrigger);
 
 

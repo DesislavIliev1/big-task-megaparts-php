@@ -2,10 +2,10 @@
 include "products_manager.php";
 
 if(isset($_POST['add_product'])){
-    $name = $_POST["p_name"];
-    $description = $_POST["p_desc"];
-    $price = $_POST["p_price"];
-    $image = $_POST["p_image"];
+    $name = htmlspecialchars($_POST["p_name"]);
+    $description = htmlspecialchars($_POST["p_desc"]);
+    $price = htmlspecialchars($_POST["p_price"]);
+    $image = htmlspecialchars($_POST["p_image"]);
 
     
 
@@ -41,27 +41,31 @@ if(isset($_POST['add_product'])){
                                     <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
                                   </svg>
                             </div>
+                            <label for="" >Име</label>
                             <div class="input-group">
-                                 <input type="text" class="form-control my-4 py-2 reg-username" name="p_name" >
-                                 <label for="" >Name</label>
+                                 <input type="text" class="form-control my-4 py-2 reg-username" required name="p_name" >
+                                 
                                 </div>
+                                <label for="" >Описание</label>
                             <div class="input-group">
-                                <input type="text" class="form-control my-4 py-2 reg-email" name="p_desc" >
-                                <label for="" >Description</label>
+                                <input type="text" class="form-control my-4 py-2 reg-email" required name="p_desc" >
+                               
                             </div>
+                            <label for="" >Цена</label>
                             <div class="input-group">
-                                <input type="text" class="form-control my-4 py-2 reg-phone" name="p_price" >
-                                <label for="" >Price</label>
+                                <input type="text" class="form-control my-4 py-2 reg-phone" required name="p_price" >
+                               
 
                             </div>
+                            <label for="" >Снимка</label>
                             <div class="input-group">
-                                <input type="text" class="form-control my-4 py-2 reg-phone" name="p_image" >
-                                <label for="" >Image</label>
+                                <input type="text" class="form-control my-4 py-2 reg-phone" required name="p_image" >
+                                
 
                             </div>
                             
                             <div class="text-center mt-3">
-                                <button type="submit" name="add_product" value="add_product" class="btn btn-primary btn-register">Add</button>
+                                <button type="submit" name="add_product" value="add_product"  class="btn btn-primary btn-register">Add</button>
                                 
                             </div>
                            

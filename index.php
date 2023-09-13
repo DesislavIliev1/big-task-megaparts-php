@@ -87,6 +87,7 @@ include_once 'products_manager.php';
         " rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="glide.core.min.css">
     <link rel="stylesheet" href="glide.theme.css">
     <script src="/main.js"></script>
@@ -126,10 +127,10 @@ include_once 'products_manager.php';
                     fill="white" />
             </svg>
             <div class="nav-item m-3 ">
-                <img src="/icons/Line 3.png">
+                <img src="icons/Line 3.png">
             </div>
-            <img class="m-3 icon-mega" src="/icons/MEGACARS.png">
-            <img class="ms-2 me-5 icon-2-mega" src="/icons/MEGAОБЯВИ.png">
+            <img class="m-3 icon-mega" src="icons/MEGACARS.png">
+            <img class="ms-2 me-5 icon-2-mega" src="icons/MEGAОБЯВИ.png">
 
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav d-flex align-items-center">
@@ -182,7 +183,7 @@ include_once 'products_manager.php';
 
 
                     <div class="nav-item m-4">
-                        <img src="/icons/Line 3.png">
+                        <img src="icons/Line 3.png">
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="20" viewBox="0 0 64 20" fill="none">
                         <path d="M9.76373 5.58688H19.665V15.7183H9.76373V5.58688Z" fill="white" />
@@ -196,7 +197,7 @@ include_once 'products_manager.php';
                     </svg>
 
                     <div class="nav-item m-4">
-                        <img src="/icons/Line 3.png">
+                        <img src="icons/Line 3.png">
                     </div>
 
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="13" height="16" viewBox="0 0 13 16"
@@ -211,7 +212,7 @@ include_once 'products_manager.php';
                     <p class="text ms-2 mt-3">ВХОД</p>
 
                     <div class="nav-item m-4">
-                        <img src="/icons/Line 3.png">
+                        <img src="icons/Line 3.png">
                     </div>
 
                     <svg class="" xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19"
@@ -227,7 +228,7 @@ include_once 'products_manager.php';
                             fill="#5FB865" />
                     </svg>
                     <p class="text ms-2 mt-3  ">02 437 32 48</p>
-                    <a href="view_product.php">Покажи продукти</a>
+                    <a href="view_product.php" class="btn btn-success">Продукти </a>
                     <a href="cart.php" class="cart ms-3"> <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart-check" viewBox="0 0 16 16">
   <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"/>
   <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
@@ -515,7 +516,7 @@ include_once 'products_manager.php';
     
 
 
-    <div class="products ms-5">
+    <div class="products   ">
         <div class="row">
         <?php
     $obj = new ProductManager();
@@ -1485,8 +1486,8 @@ include_once 'products_manager.php';
                             </svg>
                             <p><small>2023 © MEGAPARTS Marketplace</small></p>
                             </p>
-                            <img src="/icons/MEGACARS.png">
-                            <img src="/icons/MEGAОБЯВИ.png">
+                            <img src="icons/MEGACARS.png">
+                            <img src="icons/MEGAОБЯВИ.png">
 
                     </div>
                 </div>

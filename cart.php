@@ -20,7 +20,7 @@ session_start();
 <body>
 
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg mb-5" style="background-color: #19242D;">
         <div class="container-fluid">
            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -31,7 +31,7 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link" style="color:white" href="index.php">Начална Страница</a>
                     </li>
                     
                     
@@ -83,7 +83,7 @@ session_start();
                 <td>".$value['name']."</td>
                 <td>".$value['description']."</td>
                 <td>".$value['price']. "лв</td>
-                <td><img src='icons".$value['image']."'></td>
+                <td><img src='icons/".$value['image']."'></td>
                 <td>
                 <a href='cart.php?action=remove&id=".$value['id']."'>
                 <button class='btn btn-danger'>Remove</button>
